@@ -1,3 +1,5 @@
+|Build Status|  
+  
 An imitation of a game I saw and liked.  
   
 You and the opponent have 25 tokens.  
