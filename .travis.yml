@@ -21,18 +21,18 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   # Load cached docker images
   - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-  - docker build -t selenium .
+  #- docker build -t selenium .
   - docker run -d -t selenium
   - docker ps -a
 
 script: 
   - env $EXTRA_TESTS ./tests/test.py
 
-before_cache:
+#before_cache:
   # Save tagged docker images
-  - >
-    mkdir -p $HOME/docker && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
-    | xargs -n 2 -t sh -c 'test -e $HOME/docker/$1.tar.gz || docker save $0 | gzip -2 > $HOME/docker/$1.tar.gz'
+  # - >
+  #  mkdir -p $HOME/docker && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
+  #  | xargs -n 2 -t sh -c 'test -e $HOME/docker/$1.tar.gz || docker save $0 | gzip -2 > $HOME/docker/$1.tar.gz'
 
 cache:
   #It doesn't really matter what we tell Travis we're cache-ing if we're manually copying docker containers.
