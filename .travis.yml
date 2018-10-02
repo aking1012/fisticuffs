@@ -22,7 +22,7 @@ before_install:
   # Load cached docker images
   - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
   - docker build -t selenium .
-  - docker run -d -p 127.0.0.1:22 -t selenium
+  - docker run -d -t selenium
   - docker ps -a
 
 script: 
