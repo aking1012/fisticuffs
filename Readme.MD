@@ -1,4 +1,4 @@
-|Build Status|  
+![Travis Build Status](https://api.travis-ci.org/aking1012/fisticuffs.svg?branch=master)
   
 An imitation of a game I saw and liked.  
   
@@ -48,6 +48,4 @@ When the GUI(s) is(are) complete, it will contain a skinning engine.  So, you ca
 For now the tokens will remain blank.  
 
 To run the CLI, just clone the repo and import app.
-  
-.. |Build Status| image:: https://travis-ci.org/aking1012/fisticuffs.svg?branch=master
-   :target: https://travis-ci.org/aking1012/fisticuffs
+
