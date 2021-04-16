@@ -4,7 +4,7 @@ celery==4.2.1
 coverage==4.5.1
 Django==2.1
 django-celery-beat==1.1.1
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-extensions==2.1.0
 django-fake-model==0.1.4
 django-ipware==2.1.0
