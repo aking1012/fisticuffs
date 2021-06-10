@@ -2,7 +2,7 @@ astroid==2.0.1
 boto3==1.7.68
 celery==4.2.1
 coverage==4.5.1
-Django==2.1
+Django==2.2.24
 django-celery-beat==1.1.1
 django-debug-toolbar==1.9.1
 django-extensions==2.1.0
